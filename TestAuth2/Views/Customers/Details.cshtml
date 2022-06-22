@@ -1,0 +1,17 @@
+﻿@using System.Web.Mvc.Html
+@model VidlyTest.Models.Customer
+@* @model VidlyTest.Models.Customer *@
+
+@Html.Partial("_NavBar" /*, Model.Movie*/)
+
+
+<h2>@Model.Name</h2>
+<ul>
+    <h4>MembershipType Name - @Model.MembershipType.Name</h4>
+    @if (@Model.BirthDate.HasValue)
+    {
+        <h4>Birthdate - @Model.BirthDate</h4>   
+    }
+</ul>
+
+
