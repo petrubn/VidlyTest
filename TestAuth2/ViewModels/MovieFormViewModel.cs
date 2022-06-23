@@ -41,7 +41,11 @@ namespace VidlyTest.ViewModels
         [Display(Name = "Release Date")]
         [Required]
         public DateTime? ReleaseDate { get; set; }
-        
+
+        [Display(Name = "Added Date")]
+        [Required]
+        public DateTime? AddedDate { get; set; }
+
         [Display(Name = "Number in Stock")]
         [Range(1, 20)]
         [Required]
