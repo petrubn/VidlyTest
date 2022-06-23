@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Data.Entity;
 using System.IO.MemoryMappedFiles;
+using System.Web.Http;
 using Microsoft.Ajax.Utilities;
 using VidlyTest.Models;
 using VidlyTest.ViewModels;
@@ -11,7 +12,6 @@ namespace VidlyTest.Controllers
     public class CustomersController : Controller
     {
         private readonly Context _context;
-
         public CustomersController()
         {
             _context = new Context();
@@ -51,7 +51,7 @@ namespace VidlyTest.Controllers
             return View("CustomerForm", viewModel);
         }
         
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         public ActionResult Create(Customer customer)
         {
             _context.Customers.Add(customer);
@@ -73,7 +73,7 @@ namespace VidlyTest.Controllers
             return View("CustomerForm", viewModel);
         }
 
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         // [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
