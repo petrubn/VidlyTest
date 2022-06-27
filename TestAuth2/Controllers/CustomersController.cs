@@ -1,9 +1,8 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using TestAuth2.Models;
 using System.Data.Entity;
-using System.IO.MemoryMappedFiles;
 using System.Web.Http;
-using Microsoft.Ajax.Utilities;
 using VidlyTest.Models;
 using VidlyTest.ViewModels;
 
@@ -18,11 +17,12 @@ namespace VidlyTest.Controllers
         }
         public ViewResult Index()
         {
-            var customers = _context.Customers
-                .Include(c => c.MembershipType)
-                .ToList();
+            if (User.IsInRole("CanManageMovies"))
+            {
+                return View("List");
+            }
 
-            return View(customers);
+            return View("ReadOnlyList");
         }
 
         // [Route("Customers/MyDetails/{id}")]
@@ -39,6 +39,8 @@ namespace VidlyTest.Controllers
             // var customers = _context.Customers.SingleOr
             return View(customers);
         }
+        
+        [System.Web.Http.Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -51,6 +53,7 @@ namespace VidlyTest.Controllers
             return View("CustomerForm", viewModel);
         }
         
+        [System.Web.Http.Authorize(Roles = RoleName.CanManageMovies)]
         [System.Web.Mvc.HttpPost]
         public ActionResult Create(Customer customer)
         {
@@ -60,6 +63,7 @@ namespace VidlyTest.Controllers
             return RedirectToAction("Index", "Customers");
         }
         
+        [System.Web.Http.Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -74,6 +78,7 @@ namespace VidlyTest.Controllers
         }
 
         [System.Web.Mvc.HttpPost]
+        [System.Web.Http.Authorize(Roles = RoleName.CanManageMovies)]
         // [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {

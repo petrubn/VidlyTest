@@ -113,3 +113,4 @@ C:\Users\User\source\repos\TestAuth2\TestAuth2\obj\Debug\TestAuth2.pdb
 C:\Users\User\source\repos\TestAuth2\TestAuth2\bin\System.Web.Http.WebHost.dll
 C:\Users\User\source\repos\TestAuth2\TestAuth2\obj\Debug\TestAuth2.Migrations.SeedUsers.resources
 C:\Users\User\source\repos\TestAuth2\TestAuth2\obj\Debug\TestAuth2.csproj.GenerateResource.cache
+C:\Users\User\source\repos\TestAuth2\TestAuth2\obj\Debug\TestAuth2.Migrations.SeedMigration.resources

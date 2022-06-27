@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Validation;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
-using System.Web.Routing;
-using Microsoft.Ajax.Utilities;
+using TestAuth2.Models;
 using VidlyTest.Models;
 using VidlyTest.ViewModels;
 
@@ -21,6 +17,8 @@ namespace VidlyTest.Controllers
         {
             _context.Dispose();
         }
+        
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies
@@ -40,23 +38,26 @@ namespace VidlyTest.Controllers
         {
             return Content(year + "/" + month);
         }
+        
         public ActionResult Index(int? pageIndex, string sortBy)
-         {   
-             var movies = _context.Movies
-                 // .Include(m => m.Genre)
-                 .ToList();
+        {
+            if (User.IsInRole("CanManageMovies"))
+            {
+                return View("List");
+            }
 
-             return View(movies);
-         }
+            return View("ReadOnlyList");
+        }
          
          [Route("Movies")]
-         public ActionResult Movies(int ?id)
+         /*public ActionResult Movies(int ?id)
          {
              var movies = _context.Movies.ToList();
              // var movies = _context.Movies.SingleOrDefault();-
              return View(movies);
-         }
+         }*/
 
+         [Authorize(Roles = RoleName.CanManageMovies)]
          [Route("Movies/New")]
          public ActionResult New()
          {
@@ -71,6 +72,7 @@ namespace VidlyTest.Controllers
           return View("NewMovie", viewModel);
          }
 
+         [Authorize(Roles = RoleName.CanManageMovies)]
          [HttpPost]
          // [ValidateAntiForgeryToken]
          // [Between20StockNumber]
