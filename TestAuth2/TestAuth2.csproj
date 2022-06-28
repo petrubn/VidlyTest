@@ -46,6 +46,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="4.1.1" />
+    <PackageReference Include="bootstrap" Version="5.1.3" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Identity" Version="1.0.3" />
+    <PackageReference Include="jQuery" Version="3.6.0" />
+    <PackageReference Include="jquery.datatables" Version="1.10.15" />
+    <PackageReference Include="jQuery.Validation" Version="1.19.4" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.9" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
     <Reference Include="Ajax, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Ajax.0.0.0\lib\netstandard2.0\Ajax.dll</HintPath>
@@ -200,15 +211,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202206231418152_InitMirations.cs" />
-    <Compile Include="Migrations\202206231425387_SeedUsers.cs" />
-    <Compile Include="Migrations\202206231425387_SeedUsers.Designer.cs">
-      <DependentUpon>202206231425387_SeedUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206271225117_TestMigration.cs" />
-    <Compile Include="Migrations\202206271240031_SeedMigration.cs" />
-    <Compile Include="Migrations\202206271240031_SeedMigration.Designer.cs">
-      <DependentUpon>202206271240031_SeedMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206231418152_InitMirations.cs" />
+    <EmbeddedResource Include="Migrations\202206231418152_InitMirations.Designer.cs" />
+    <EmbeddedResource Include="Migrations\202206231425387_SeedUsers.cs" />
+    <EmbeddedResource Include="Migrations\202206231425387_SeedUsers.Designer.cs" />
+    <EmbeddedResource Include="Migrations\202206271225117_TestMigration.cs" />
+    <EmbeddedResource Include="Migrations\202206271225117_TestMigration.Designer.cs" />
+    <EmbeddedResource Include="Migrations\202206271240031_SeedMigration.cs" />
+    <EmbeddedResource Include="Migrations\202206271240031_SeedMigration.Designer.cs" />
+    <EmbeddedResource Include="Migrations\202206271442530_AddDrivingLicenseToApplicationUser.cs" />
+    <EmbeddedResource Include="Migrations\202206271442530_AddDrivingLicenseToApplicationUser.Designer.cs" />
+    <EmbeddedResource Include="Migrations\202206271535269_JustTestMigration.cs" />
+    <EmbeddedResource Include="Migrations\202206271535269_JustTestMigration.Designer.cs" />
+    <Compile Include="Migrations\202206281332075_Holla.cs" />
+    <Compile Include="Migrations\202206281332075_Holla.Designer.cs">
+      <DependentUpon>202206281332075_Holla.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -227,10 +244,15 @@
     <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
     <Compile Include="ViewModels\SecondMovieViewModel.cs" />
+    <EmbeddedResource Include="Migrations\202206281332075_Holla.resx">
+      <DependentUpon>202206281332075_Holla.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-TestAuth2-20220622025027.mdf" />
     <Content Include="App_Data\aspnet-TestAuth2-20220622025027_log.ldf" />
+    <Content Include="App_Data\DefaultConnection.mdf" />
+    <Content Include="App_Data\DefaultConnection_log.ldf" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -554,12 +576,12 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202206231425387_SeedUsers.resx">
-      <DependentUpon>202206231425387_SeedUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206271240031_SeedMigration.resx">
-      <DependentUpon>202206271240031_SeedMigration.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206231418152_InitMirations.resx" />
+    <EmbeddedResource Include="Migrations\202206231425387_SeedUsers.resx" />
+    <EmbeddedResource Include="Migrations\202206271225117_TestMigration.resx" />
+    <EmbeddedResource Include="Migrations\202206271240031_SeedMigration.resx" />
+    <EmbeddedResource Include="Migrations\202206271442530_AddDrivingLicenseToApplicationUser.resx" />
+    <EmbeddedResource Include="Migrations\202206271535269_JustTestMigration.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
