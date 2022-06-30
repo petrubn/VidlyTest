@@ -75,7 +75,7 @@ namespace TestAuth2.Models
         [Required]
         [Phone]
         [Display(Name = "Phone Number")]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
     }
 
     public class ConfigureTwoFactorViewModel

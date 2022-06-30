@@ -27,7 +27,7 @@ public class Context : IdentityDbContext<ApplicationUser>
         return new Context();
     }
     
-    public Context() : base(@"Server=DESKTOP-K0UC1SE\MSSQLSERVER01;Database=Vidly2;User Id=Petru;Password=test;")
+    public Context() : base(@"Server=DESKTOP-K0UC1SE\MSSQLSERVER01;Database=Vidly;User Id=Petru;Password=test;")
     {
         // Database.SetInitializer<Context>(new CreateDatabaseIfNotExists<Context>());
         // Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
