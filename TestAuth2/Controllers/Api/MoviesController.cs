@@ -5,7 +5,6 @@ using System.Net;
 using VidlyTest.Models;
 using System.Web.Http;
 using AutoMapper;
-using Microsoft.Ajax.Utilities;
 using TestAuth2.Models;
 
 [Route("api/movies")]
@@ -19,7 +18,7 @@ public class MoviesController : ApiController
     }
 
     // GET api/movies
-    [Authorize(Roles = RoleName.CanManageMovies)]
+    // [Authorize(Roles = RoleName.CanManageMovies)]
     [HttpGet]
     public IEnumerable<MovieDto> GetMovies()
     {
@@ -27,7 +26,7 @@ public class MoviesController : ApiController
     }
     
     // GET api/movies/1
-    [Authorize(Roles = RoleName.CanManageMovies)]
+    // [Authorize(Roles = RoleName.CanManageMovies)]
     [HttpGet]
     [Route("api/movies/{id}")]
     public IHttpActionResult GetMovie(int id)
@@ -41,7 +40,7 @@ public class MoviesController : ApiController
     }
 
     [HttpPost]
-    [Authorize(Roles = RoleName.CanManageMovies)]
+    // [Authorize(Roles = RoleName.CanManageMovies)]
     // [Route("api/movies/{id}")] -- optional is not optional..
     public IHttpActionResult CreateMovies(MovieDto movieDto)
     {
@@ -58,7 +57,7 @@ public class MoviesController : ApiController
     }
     
     [HttpPut]
-    [Authorize(Roles = RoleName.CanManageMovies)]
+    // [Authorize(Roles = RoleName.CanManageMovies)]
     [Route("api/movies/{id}")]
     public void UpdateMovie(int id, [FromBody] MovieDto movieDto)
     {
@@ -77,7 +76,7 @@ public class MoviesController : ApiController
     
     // DELETE /api/movies/1
     [HttpDelete]
-    [Authorize(Roles = RoleName.CanManageMovies)]
+    // [Authorize(Roles = RoleName.CanManageMovies)]
     [Route("api/movies/{id}")]
     public void DeleteMovies(int id)
     { 

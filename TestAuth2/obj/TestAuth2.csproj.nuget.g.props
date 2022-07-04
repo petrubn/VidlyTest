@@ -18,6 +18,11 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\User\.nuget\packages\newtonsoft.json\6.0.4</PkgNewtonsoft_Json>
     <PkgjQuery Condition=" '$(PkgjQuery)' == '' ">C:\Users\User\.nuget\packages\jquery\3.6.0</PkgjQuery>
+    <PkgGlimpse Condition=" '$(PkgGlimpse)' == '' ">C:\Users\User\.nuget\packages\glimpse\1.8.6</PkgGlimpse>
+    <PkgGlimpse_AspNet Condition=" '$(PkgGlimpse_AspNet)' == '' ">C:\Users\User\.nuget\packages\glimpse.aspnet\1.9.2</PkgGlimpse_AspNet>
+    <PkgGlimpse_Mvc5 Condition=" '$(PkgGlimpse_Mvc5)' == '' ">C:\Users\User\.nuget\packages\glimpse.mvc5\1.5.3</PkgGlimpse_Mvc5>
+    <PkgGlimpse_Ado Condition=" '$(PkgGlimpse_Ado)' == '' ">C:\Users\User\.nuget\packages\glimpse.ado\1.7.3</PkgGlimpse_Ado>
+    <PkgGlimpse_EF6 Condition=" '$(PkgGlimpse_EF6)' == '' ">C:\Users\User\.nuget\packages\glimpse.ef6\1.6.5</PkgGlimpse_EF6>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\User\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
   </PropertyGroup>
 </Project>

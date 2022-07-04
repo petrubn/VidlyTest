@@ -118,3 +118,8 @@ C:\Users\User\source\repos\TestAuth2\TestAuth2\obj\Debug\TestAuth2.Migrations.20
 C:\Users\User\source\repos\TestAuth2\TestAuth2\obj\Debug\TestAuth2.Migrations.202206231425387_SeedUsers.resources
 C:\Users\User\source\repos\TestAuth2\TestAuth2\obj\Debug\TestAuth2.Migrations.202206271225117_TestMigration.resources
 C:\Users\User\source\repos\TestAuth2\TestAuth2\obj\Debug\TestAuth2.Migrations.Holla.resources
+C:\Users\User\source\repos\TestAuth2\TestAuth2\bin\Glimpse.Core.dll
+C:\Users\User\source\repos\TestAuth2\TestAuth2\bin\Glimpse.Ado.dll
+C:\Users\User\source\repos\TestAuth2\TestAuth2\bin\Glimpse.AspNet.dll
+C:\Users\User\source\repos\TestAuth2\TestAuth2\bin\Glimpse.EF6.dll
+C:\Users\User\source\repos\TestAuth2\TestAuth2\bin\Glimpse.Mvc5.dll

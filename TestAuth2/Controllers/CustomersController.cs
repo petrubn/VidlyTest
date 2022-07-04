@@ -1,8 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using TestAuth2.Models;
-using System.Data.Entity;
-using System.Web.Http;
 using VidlyTest.Models;
 using VidlyTest.ViewModels;
 
